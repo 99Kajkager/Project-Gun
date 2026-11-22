@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - Hand
   - Ground
+  - Fuse
   layers:
   - Default
   - TransparentFX
