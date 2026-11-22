@@ -4,36 +4,43 @@ using UnityEngine.Events;
 public class PadlockController : MonoBehaviour
 {
     [Header("Wheel Settings")]
-    public Transform[] wheels;          // Assign your 3 wheels here in the Inspector
-    public int[] correctCombination = { 7, 3, 5 }; // The winning code digits
-    private int[] currentValues;        // Keeps track of each wheel's current digit (0-9)
+
+    // Assign the wheels in the inspector :D
+    public Transform[] wheels;
+
+    // The winning code digits
+    public int[] correctCombination = { 7, 3, 5, 8}; 
+    
+    // Keeps track of each wheel's current digit
+    private int[] currentValues;        
 
     [Header("Events")]
-    public UnityEvent onUnlocked;       // What happens when solved (e.g., open door)
+    // When the padlock is correct combination
+    public UnityEvent onUnlocked;       
 
     void Start()
     {
         currentValues = new int[wheels.Length];
     }
 
-    // Call this function when the player interacts with a wheel to turn it forward
+    // When the player interacts with a wheel to turn it forward
     public void TurnWheelForward(int wheelIndex)
     {
         currentValues[wheelIndex] = (currentValues[wheelIndex] + 1) % 10;
 
         // Rotate the wheel visual by 36 degrees (360 degrees / 10 numbers = 36)
-        wheels[wheelIndex].Rotate(Vector3.right, 36f);
+        wheels[wheelIndex].Rotate(Vector3.up, 36f, Space.Self);
 
         CheckCombination();
     }
 
-    // Call this function when the player interacts with a wheel to turn it backward
+    // When the player interacts with a wheel turn it backward
     public void TurnWheelBackward(int wheelIndex)
     {
         currentValues[wheelIndex] = (currentValues[wheelIndex] - 1 + 10) % 10;
 
-        // Rotate back by 36 degrees
-        wheels[wheelIndex].Rotate(Vector3.right, -36f);
+        // Rotate back by 36 degrees (sine 360/10 is 36)
+        wheels[wheelIndex].Rotate(Vector3.up, -36f, Space.Self);
 
         CheckCombination();
     }
@@ -44,11 +51,11 @@ public class PadlockController : MonoBehaviour
         {
             if (currentValues[i] != correctCombination[i])
             {
-                return; // Exit if any wheel doesn't match
+                return; // If it doesn't match the correct combination
             }
         }
 
-        // If the loop finishes, all wheels match!
+        // Loop finishes if all wheels match the combination
         Debug.Log("Padlock Unlocked!");
         onUnlocked.Invoke();
     }

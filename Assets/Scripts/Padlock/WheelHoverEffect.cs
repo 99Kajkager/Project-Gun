@@ -6,7 +6,9 @@ public class WheelHoverEffect : MonoBehaviour
 
     [Header("Colors")]
     public Color normalColor = Color.white;
-    public Color hoverColor = Color.yellow; // The color when the ray points at it
+
+    // The color when the ray points at it
+    public Color hoverColor = Color.yellow; 
 
     void Start()
     {
@@ -14,13 +16,13 @@ public class WheelHoverEffect : MonoBehaviour
         SetColor(normalColor);
     }
 
-    // Call this when the ray enters the wheel
+    // When the ray enters the wheel
     public void OnHoverEnter()
     {
         SetColor(hoverColor);
     }
 
-    // Call this when the ray leaves the wheel
+    // When the ray leaves the wheel
     public void OnHoverExit()
     {
         SetColor(normalColor);
