@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639300399908515615
+  lastModified: 639309744449432544
   FileSizes:
   - Name: 
-    Value: 1206
+    Value: 1288
   Exists: 1
 --- !u!114 &-5281299991740651856
 MonoBehaviour:
@@ -148,6 +148,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 420
+--- !u!114 &-3173489645609014786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WaterDrop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/WaterDrop
+  Guid:
+    Data1: 1839167508
+    Data2: 1250332733
+    Data3: -1914997101
+    Data4: -259450900
+  Banks:
+  - {fileID: -1518456489898174814}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2040
 --- !u!114 &-1518456489898174814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +190,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639300399908495585
+  lastModified: 639309744449422539
   FileSizes: []
   Exists: 1
 --- !u!114 &-1106324395138568011
@@ -267,13 +294,15 @@ MonoBehaviour:
   - {fileID: 5422900786938294472}
   - {fileID: 7568447252693984494}
   - {fileID: 7385991724147126925}
+  - {fileID: -3173489645609014786}
+  - {fileID: 7227514736077628992}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1518456489898174814}
   StringsBanks:
   - {fileID: -8430735613719218894}
   cacheVersion: 131860
-  cacheTime: 639300399908515615
+  cacheTime: 639309744449432544
   SerializableEventsDict:
   - key: event:/Footsteps/Footsteps
     index: 0
@@ -297,6 +326,10 @@ MonoBehaviour:
     index: 9
   - key: event:/Fire
     index: 10
+  - key: event:/WaterDrop
+    index: 11
+  - key: event:/New
+    index: 12
 --- !u!114 &768775958840232317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,6 +555,33 @@ MonoBehaviour:
   lastModified: 639274846737876419
   FileSizes: []
   Exists: 1
+--- !u!114 &7227514736077628992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/New
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/New
+  Guid:
+    Data1: 742778176
+    Data2: 1277241304
+    Data3: -1067564624
+    Data4: 1037773553
+  Banks:
+  - {fileID: -1518456489898174814}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7385991724147126925
 MonoBehaviour:
   m_ObjectHideFlags: 0
