@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639309887847343092
+  lastModified: 639310619889760086
   FileSizes:
   - Name: 
-    Value: 1288
+    Value: 1482
   Exists: 1
 --- !u!114 &-5281299991740651856
 MonoBehaviour:
@@ -175,6 +175,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2040
+--- !u!114 &-2149511709980459903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SlidingDoor
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SlidingDoor
+  Guid:
+    Data1: 409032631
+    Data2: 1114848612
+    Data3: 597310347
+    Data4: -975494658
+  Banks:
+  - {fileID: -1518456489898174814}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1384
+--- !u!114 &-1766181216442954203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NeckSnap
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/NeckSnap
+  Guid:
+    Data1: 9362743
+    Data2: 1230650090
+    Data3: 753291449
+    Data4: 1959753451
+  Banks:
+  - {fileID: -1518456489898174814}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 240
 --- !u!114 &-1518456489898174814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,9 +244,36 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639309887847343092
+  lastModified: 639310619889754951
   FileSizes: []
   Exists: 1
+--- !u!114 &-1366655133397284634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Click
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Click
+  Guid:
+    Data1: 212382830
+    Data2: 1287498034
+    Data3: 386532275
+    Data4: -1219802764
+  Banks:
+  - {fileID: -1518456489898174814}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 88
 --- !u!114 &-1106324395138568011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,13 +377,17 @@ MonoBehaviour:
   - {fileID: 7385991724147126925}
   - {fileID: -3173489645609014786}
   - {fileID: 7227514736077628992}
+  - {fileID: -1366655133397284634}
+  - {fileID: -2149511709980459903}
+  - {fileID: -1766181216442954203}
+  - {fileID: 598982704929043227}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1518456489898174814}
   StringsBanks:
   - {fileID: -8430735613719218894}
   cacheVersion: 131860
-  cacheTime: 639309887847343092
+  cacheTime: 639310619889760086
   SerializableEventsDict:
   - key: event:/Footsteps/Footsteps
     index: 0
@@ -330,6 +415,41 @@ MonoBehaviour:
     index: 11
   - key: event:/New
     index: 12
+  - key: event:/Click
+    index: 13
+  - key: event:/SlidingDoor
+    index: 14
+  - key: event:/NeckSnap
+    index: 15
+  - key: event:/PuppetFootstep
+    index: 16
+--- !u!114 &598982704929043227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PuppetFootstep
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PuppetFootstep
+  Guid:
+    Data1: 1694309606
+    Data2: 1149419200
+    Data3: -2063376455
+    Data4: 1905216831
+  Banks:
+  - {fileID: -1518456489898174814}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &768775958840232317
 MonoBehaviour:
   m_ObjectHideFlags: 0

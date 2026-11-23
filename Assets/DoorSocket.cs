@@ -12,6 +12,7 @@ public class FuseBox : MonoBehaviour
     [SerializeField] private string requiredTag = "Fuse";
 
     [Header("Audio")]
+    [SerializeField] private EventReference socketClickSound;
     [SerializeField] private EventReference doorOpenSound;
 
     private XRSocketInteractor socket;
@@ -39,17 +40,20 @@ public class FuseBox : MonoBehaviour
 
         StartCoroutine(LockFuse(args.interactableObject.transform));
 
+        // Click sound from the socket
+        if (!socketClickSound.IsNull)
+            RuntimeManager.PlayOneShot(socketClickSound, transform.position);
+
         // Open the door
         doorAnimator.SetBool(boolName, true);
 
-        // Play the FMOD event from the door object
+        // Door sound from the door object
         if (!doorOpenSound.IsNull)
             RuntimeManager.PlayOneShotAttached(doorOpenSound, doorAnimator.gameObject);
     }
 
     private IEnumerator LockFuse(Transform fuse)
     {
-        // Wait a frame so XRI finishes its own setup on the fuse first
         yield return null;
 
         Rigidbody rb = fuse.GetComponent<Rigidbody>();
