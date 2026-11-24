@@ -11,6 +11,6 @@ public class TriggerOn : MonoBehaviour
     {
         objectToTurnOn.SetActive(true);
         RuntimeManager.PlayOneShot(soundEvent, transform.position);
+        gameObject.SetActive(false);
     }
 }
-
